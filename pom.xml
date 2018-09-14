@@ -205,6 +205,19 @@
     </plugins>
   </build>
 
+  <distributionManagement>
+    <repository>
+      <id>exercise.repo</id>
+      <name>TimCo Internal Repository</name>
+      <url>http://localhost:8081/repository/Liatrio-Exercise-RELEASES/</url>
+    </repository>
+    <snapshotRepository>
+      <id>exercise.repo</id>
+      <name>TimCo Internal Repository</name>
+      <url>http://localhost:8081/repository/Liatrio-Exercise-SNAPSHOTS/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <!-- Apache 2 license -->
   <licenses>
     <license>
