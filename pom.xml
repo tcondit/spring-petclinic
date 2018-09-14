@@ -110,6 +110,12 @@
     </dependency>
   </dependencies>
 
+  <scm>
+    <connection>scm:git:https://github.com/tcondit/spring-petclinic</connection>
+    <developerConnection>scm:git:https://github.com/tcondit/spring-petclinic</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+
   <build>
     <plugins>
       <plugin>
