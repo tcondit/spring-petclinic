@@ -3,5 +3,5 @@ node {
     stage('build')    { sh 'mvn clean install' }
     stage('test')     { sh 'mvn test' }
     stage('package')  { sh 'mvn package' }
-    steps('deploy')   { sh 'mvn clean deploy -DskipTests' }
+    stage('deploy')   { sh 'mvn deploy -DskipTests' }
 }
