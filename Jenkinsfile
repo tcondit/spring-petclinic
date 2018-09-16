@@ -10,5 +10,3 @@ node {
         sh 'mvn jar:jar deploy:deploy'
     }
 }
-
-// trigger test
