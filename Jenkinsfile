@@ -1,13 +1,13 @@
-node {
-    stage 'Init' {
+//node {
+    stage('checkout') {
         checkout scm
         println "Current branch ${BRANCH_NAME}"
     }
 
-    stage 'Other branches' {
+    stage('show-branch') {
         println "Current branch ${BRANCH_NAME}"
     }
-}
+//}
 
 //stage 'build' {
 //    sh 'mvn clean install'
