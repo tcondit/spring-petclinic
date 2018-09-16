@@ -1,4 +1,4 @@
-//node {
+node {
     stage('checkout') {
         checkout scm
         println "Current branch ${BRANCH_NAME}"
@@ -7,7 +7,7 @@
     stage('show-branch') {
         println "Current branch ${BRANCH_NAME}"
     }
-//}
+}
 
 //stage 'build' {
 //    sh 'mvn clean install'
