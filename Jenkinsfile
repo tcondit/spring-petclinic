@@ -6,7 +6,7 @@ node {
     stage('show-branch') {
         println "Current branch ${BRANCH_NAME}"
     }
-    stage 'build' {
+    stage ('build') {
         sh 'mvn clean install'
     }
 //    stage('test') {
