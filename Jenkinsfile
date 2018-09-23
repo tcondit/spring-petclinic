@@ -1,3 +1,5 @@
+// trigger test
+
 node {
     stage('checkout') {
         checkout scm
