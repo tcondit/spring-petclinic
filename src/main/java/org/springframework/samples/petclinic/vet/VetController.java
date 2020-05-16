@@ -1,11 +1,11 @@
 /*
- * Copyright 2012-2018 the original author or authors.
+ * Copyright 2012-2019 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -30,29 +30,29 @@ import java.util.Map;
 @Controller
 class VetController {
 
-    private final VetRepository vets;
+	private final VetRepository vets;
 
-    public VetController(VetRepository clinicService) {
-        this.vets = clinicService;
-    }
+	public VetController(VetRepository clinicService) {
+		this.vets = clinicService;
+	}
 
-    @GetMapping("/vets.html")
-    public String showVetList(Map<String, Object> model) {
-        // Here we are returning an object of type 'Vets' rather than a collection of Vet
-        // objects so it is simpler for Object-Xml mapping
-        Vets vets = new Vets();
-        vets.getVetList().addAll(this.vets.findAll());
-        model.put("vets", vets);
-        return "vets/vetList";
-    }
+	@GetMapping("/vets.html")
+	public String showVetList(Map<String, Object> model) {
+		// Here we are returning an object of type 'Vets' rather than a collection of Vet
+		// objects so it is simpler for Object-Xml mapping
+		Vets vets = new Vets();
+		vets.getVetList().addAll(this.vets.findAll());
+		model.put("vets", vets);
+		return "vets/vetList";
+	}
 
-    @GetMapping({ "/vets" })
-    public @ResponseBody Vets showResourcesVetList() {
-        // Here we are returning an object of type 'Vets' rather than a collection of Vet
-        // objects so it is simpler for JSon/Object mapping
-        Vets vets = new Vets();
-        vets.getVetList().addAll(this.vets.findAll());
-        return vets;
-    }
+	@GetMapping({ "/vets" })
+	public @ResponseBody Vets showResourcesVetList() {
+		// Here we are returning an object of type 'Vets' rather than a collection of Vet
+		// objects so it is simpler for JSon/Object mapping
+		Vets vets = new Vets();
+		vets.getVetList().addAll(this.vets.findAll());
+		return vets;
+	}
 
 }
